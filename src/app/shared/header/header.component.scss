@@ -1,0 +1,12 @@
+.mq-header {
+    padding: 1rem 0;
+    background-color: #fdfdfd;
+    &__container{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.mq-logo__image {
+    height: 3.75rem;
+}
