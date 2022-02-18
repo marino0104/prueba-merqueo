@@ -22,3 +22,20 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.mq-button{
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    &__primary{
+        background-color: #f31a80;
+        color: #fff;
+        border: 1px solid #f31a80;
+        &:hover{
+            color: #f31a80;
+            background-color: #fff;
+        }
+    }
+}

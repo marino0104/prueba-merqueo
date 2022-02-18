@@ -7,7 +7,7 @@ import { ProductsService } from 'src/app/shared/services/products.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  productsList=[]
+  productsList=[];
 
   constructor(private productsService: ProductsService) { }
 
@@ -18,8 +18,20 @@ export class HomeComponent implements OnInit {
   getProductsList(): void{
     this.productsService.getProducts().subscribe(res=>{
       if(res.data){
-        this.productsList=res.data;
+        localStorage.setItem('products', JSON.stringify(res.data));
+        this.setProducts();
       }
     })
+  }
+
+  setProducts(): void{
+    if(localStorage.getItem('products')){
+      this.productsList=JSON.parse(localStorage.getItem('products') || '[]');
+    }
+    console.info(this.productsList)
+  }
+
+  pushProductOnCart(productItem: any){
+    console.info(productItem)
   }
 }

@@ -1,7 +1,7 @@
 <div class="mq-product__container">
     <div class="mq-product__image--container">
-        <img [src]="product.attributes.image_app_url" />
+        <img [src]="product.attributes.image_app_url" class="mq-product__image"/>
     </div>
     <h3 class="mq-product__name">{{product.attributes.name}}</h3>
     <p class="mq-product__price">{{product.attributes.price | currency : 'USD' : 'symbol' : '2.0'}}</p>
-</div>
+    <button class="mq-button mq-button__primary" *ngIf="!product.attributes.quantityBuyed || product.attributes.quantityBuyed===0" (click)="saveToCart(product.attributes)">Añadir al carrito</button>
