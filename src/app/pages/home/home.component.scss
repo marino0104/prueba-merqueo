@@ -1,0 +1,15 @@
+.mq-products__container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.mq-product {
+    width: 21%;
+    text-align: center;
+    padding: 1rem;
+    border:  1px solid #f2f2f2;
+    border-radius: .5rem;
+    background-color: #f3f3f3;
+    cursor: pointer;
+}

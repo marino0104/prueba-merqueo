@@ -1,1 +1,7 @@
-<p>card works!</p>
+<div class="mq-product__container">
+    <div class="mq-product__image--container">
+        <img [src]="product.attributes.image_app_url" />
+    </div>
+    <h3 class="mq-product__name">{{product.attributes.name}}</h3>
+    <p class="mq-product__price">{{product.attributes.price | currency}}</p>
+</div>
