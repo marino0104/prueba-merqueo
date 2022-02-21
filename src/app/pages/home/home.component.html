@@ -2,7 +2,7 @@
     <div class="mq-container">
         <div class="mq-row mq-products__container">
             <div class="mq-product" *ngFor="let item of productsList">
-                <app-card  [product]="item" (emitProduct)="pushProductOnCart($event)"></app-card>
+                <app-card  [product]="item" (emitProduct)="addProductOnCart($event)"></app-card>
             </div>
         </div>
     </div>
